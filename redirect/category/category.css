@@ -274,14 +274,14 @@ footer p{
     font-size: 1em;
     padding: 10px;
     color: #fff;
-    border: 2px solid #06D85F;
+    border: 2px solid #fff;
     border-radius: 20px/50px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
   }
   .button:hover {
-    background: #06D85F;
+    background: #fff;
   }
   
   .overlay {
@@ -301,13 +301,13 @@ footer p{
   }
   
   .popup {
-    margin: 70px auto;
+    margin: 200px auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
+    width: 50%;
     position: relative;
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
   }
   
   .popup h2 {
@@ -326,18 +326,24 @@ footer p{
     color: #333;
   }
   .popup .close:hover {
-    color: #06D85F;
+    color: #fff;
   }
   .popup .content {
     max-height: 30%;
     overflow: auto;
   }
   
-  @media screen and (max-width: 700px){
+@media screen and (max-width: 700px){
     .box{
       width: 70%;
     }
     .popup{
       width: 70%;
     }
-  }
+    .content{
+        height: 300px;
+    }
+    .popup .close {
+        width: 10%;
+    }
+}
