@@ -305,7 +305,7 @@ footer p{
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 50%;
+    width: 40%;
     position: relative;
     transition: all 3s ease-in-out;
   }
@@ -344,6 +344,6 @@ footer p{
         height: 300px;
     }
     .popup .close {
-        width: 10%;
+        width: 8%;
     }
 }
