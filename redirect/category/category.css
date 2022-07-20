@@ -17,7 +17,7 @@ a{
 .main{
     width:100%;
     height: 6vh;
-    background-image: url(img/background.png);
+    background-image: url(https://github.com/riczfe/Assignment_1_Responsive_website/blob/main/img/background.png?raw=true);
     background-size: cover;
     background-position: center center;
     position: relative;
@@ -267,3 +267,4 @@ footer p{
     box-shadow: 5px 10px 30px rgba(90,118,253,0.5);
     transition: all ease 0.3s;
 }
+
