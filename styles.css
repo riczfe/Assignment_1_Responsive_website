@@ -41,6 +41,14 @@ header {
     color: #333;
 }
 
+.menu-icon {
+    display: none;
+}
+
+#menuToggle {
+    display: none
+}
+
 .logo img {
     width: 100px;
     float: left;
