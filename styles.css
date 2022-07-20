@@ -1,86 +1,144 @@
-* {
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing: border-box;
 }
 
-.wrapper {
-    width: 1170px;
-    margin: auto;
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: calibri;
 }
 
-.wrapper .logo img {
-    float: left;
+ul{
+    list-style: none;
 }
-
-header {
-    background: linear-gradient(rgba(0, 0, 0 , 0.6), rgba(0, 0, 0, 0.6)), url(img/home.jpeg);
-    height: 100vh;
+a{
+    text-decoration: none;
+}
+.main{
+    width:100%;
+    height:100vh;
+    background-image: url(img/home.jpeg);
     background-size: cover;
     background-position: center center;
     position: relative;
 }
-
-.nav-area {
-    float: right;
-    list-style: none;
-    margin-top: 30px;
+.logo img{
+    width: 60px;
+    height: 70px;
+    object-fit: fill;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 30px;
+    background-color:#fff;
+    box-shadow: 2px 2px 20px rgba(90,118,253,0.13);
+    z-index: 1;
+    width:100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+nav ul{
+    display: flex;
+    margin:0px;
+    padding: 0px;
+}
+nav ul li a{
+    height:40px;
+    line-height: 43px;
+    margin: 8px;
+    padding: 0px 22px;
+    display: flex;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color:#111;
+    letter-spacing: 1px;
+}
+nav ul li a:hover{
+    background-color: #5a76fd;
+    color:#fff;
+    box-shadow: 5px 10px 30px rgba(90,118,253,0.5);
+    transition: all ease 0.2s;
 }
 
-.nav-area li {
-    display: inline-block;
-}
-
-.nav-area li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 20px;
-}
-
-.nav-area li a:hover {
-    background: #fff;
-    color: #333;
-}
-
-.menu-icon {
+nav .menu-btn {
     display: none;
 }
 
-#menuToggle {
-    display: none
-}
-
-.logo img {
-    width: 100px;
-    float: left;
-    height: auto;
-}
-
-.welcome-text {
-    position: absolute;
-    width: 600px;
-    margin: 20% 30%;
-    text-align: center;
-}
-
-.welcome-text h1 {
-    text-align: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 60px;
-}
-
-.welcome-text a {
-    border: 1px solid white;
-    padding: 10px 25px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 15px;
-    margin-top: 20px;
-    display: inline-block;
-    color: #fff
-}
-
-.welcome-text a:hover {
-    background: #fff;
-    color: #333;
-}
+@media(max-width:1100px){
+    nav{
+        justify-content: space-between;
+        height: 65px;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0px;
+        background-color: #fff;
+        border-bottom: 4px solid #5a76fd;
+        width:100%;
+    }
+    .menu li{
+        width:100%;
+    }
+    nav .menu li a{
+        width:100%;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        margin:0px;
+        padding: 25px;
+        border:1px solid rgba(38,38,38,0.03);
+    }
+    nav .menu-icon{
+        cursor: pointer;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    nav .menu-icon .nav-icon{
+        background-color: #333333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width:18px;
+    }
+    nav .menu-icon .nav-icon:before,
+    nav .menu-icon .nav-icon:after{
+        background: #333333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all ease-out 0.2s;
+        width:100%;
+    }
+    nav .menu-icon .nav-icon:before{
+        top: 5px;
+    }
+    nav .menu-icon .nav-icon:after{
+        top:-5px;
+    }
+    nav .menu-btn:checked ~ .menu-icon .nav-icon{
+        background: transparent;
+    }
+    nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    nav .menu-btn{
+        display: none;
+    }
+    nav .menu-btn:checked ~ .menu{
+        display: block;
+    }
