@@ -208,16 +208,18 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 20px 30px;
+    margin: 20px -10px;
+    align-content: space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 .box{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width:50%;
-    height: 400px;
+    width:40%;
     text-align: center;
     box-shadow: 2px 2px 20px rgba(90,118,253,0.15);
     border-radius: 10px;
@@ -268,83 +270,13 @@ footer{
     transition: all ease 0.3s;
 }
 
-/*Pop up*/
-
-.button {
-    font-size: 1em;
-    padding: 10px;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 20px/50px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-  }
-  .button:hover {
-    background: #fff;
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-  }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .popup {
-    margin: 200px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 40%;
-    position: relative;
-    transition: all 3s ease-in-out;
-  }
-  
-  .popup h2 {
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-  }
-  .popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-  }
-  .popup .close:hover {
-    color: #fff;
-  }
-  .popup .content {
-    max-height: 30%;
-    overflow: auto;
-  }
-  
 @media screen and (max-width: 960px){
     .box{
-      width: 70%;
+        display: grid;
+        width: 70%;
     }
-    .popup{
-      width: 70%;
-    }
-    .content{
-        height: 300px;
-    }
-    .popup .close {
-        width: 8%;
+    .box img {
+        margin: 10px auto;
     }
 }
 
@@ -363,3 +295,52 @@ footer{
     box-shadow: none !important ;
     color: rgb(230, 218, 114) !important 
 }
+
+#footer-menu a:hover {
+    background: transparent;
+    color: transparent;
+    box-shadow:unset;
+    color:rgb(230, 218, 114);
+}
+
+@media screen and (max-width: 960px) {
+    #footer-menu a{
+        display: inline;
+        line-height: 0;
+        padding: 0;
+        font-size: 11px;
+    }
+}
+
+.services{
+    background-image:url("../images/poduct\ bg.png");
+    background-size: 1000px;
+    background-position: center;
+}
+.services-heading{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.services-heading h2{
+    line-height: 55px;
+    font-size: 2.2rem;
+    color:#22252e;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0px;
+}
+.services-heading p{
+    font-size: 1rem;
+    color:#777474;
+    width:50%;
+}
+
+.bold {
+    font-weight: 500;
+    font-size: 18px;
+}
+
