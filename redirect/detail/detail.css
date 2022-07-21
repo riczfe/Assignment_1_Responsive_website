@@ -405,3 +405,8 @@ footer {
 .book-description h2{
     margin-top: 10px
 }
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
