@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    
 }
 
 body{
@@ -356,8 +357,8 @@ footer{
 }
 
 .sub-img img {
-    height: 123px;
-    width: 88px;
+    height: 71px;
+    width: 65px;
 }
 
 @media screen and (max-width: 960px) {
@@ -369,9 +370,10 @@ footer{
 
 .price-section {
     max-width: 300px;
-    margin: auto;
+    margin: 80px;
     text-align: center;
     font-family: arial;
+    margin-bottom: 175px;
 }
 
 .price-section button{
@@ -382,10 +384,24 @@ footer{
     background-color: #000;
     text-align: center;
     cursor: pointer;
-    width: 100%;
-    font-size: 18px;
+    width: 181px;
+    font-size: 24px;
+    border-radius: 16px;
 }
 
 .price-section button:hover {
     opacity: 0.7;
-  }
+}
+
+.book-description {
+    font-size: 26px;
+}
+
+footer {
+    height: 0;
+    width: 100%;
+}
+
+.book-description h2{
+    margin-top: 10px
+}
