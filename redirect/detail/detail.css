@@ -362,6 +362,6 @@ footer{
 @media screen and (max-width: 960px) {
     .sub-img {
         display: inline;
-        width: 50%
+        width: 100%;
     }
 }
