@@ -224,7 +224,7 @@ footer{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width:70%;
+    width:40%;
     text-align: center;
     box-shadow: 2px 2px 20px rgba(90,118,253,0.15);
     border-radius: 10px;
@@ -356,7 +356,8 @@ footer{
 }
 
 .sub-img img {
-    height: 100px
+    height: 123px;
+    width: 88px;
 }
 
 @media screen and (max-width: 960px) {
@@ -365,3 +366,26 @@ footer{
         width: 100%;
     }
 }
+
+.price-section {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price-section button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.price-section button:hover {
+    opacity: 0.7;
+  }
