@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link rel="stylesheet" href="contact.css">
 </head>
 <body>
@@ -13,7 +15,7 @@
             <!--navigation-->
             <nav id="main-nav">
                 <!--Logo-->
-                <a href="./index.html" class="logo">
+                <a href="../../index.html" class="logo">
                     <img src="https://github.com/riczfe/Assignment_1_Responsive_website/blob/updating-branch/img/logo.png?raw=true" alt="image-1"/>
                 </a>
                 <!-- Menu Button -->
@@ -23,10 +25,10 @@
                 </label>
                 <!--Navbar-->
                 <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="redirect/action/action.html">Action and Adventure</a></li>
-                    <li><a href="./redirect/classic/classic.html">Classic Book</a></li>
-                    <li><a href="./redirect/literacy/literacy.html">Literacy Fiction</a></li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../action/action.html">Action and Adventure</a></li>
+                    <li><a href="../classic/classic.html">Classic Book</a></li>
+                    <li><a href="../literacy/literacy.html">Literacy Fiction</a></li>
                 </ul>
              </nav>
             </div>
@@ -53,8 +55,14 @@
                   </div>
             
                   <div class="form-input">
-                    <h3>Send us a message</h3>
+                    <h3>Fill in the form below</h3>
                     <form>
+                        <select>
+                          <option disabled selected value>Contact Purpose</option>
+                          <option>I want to sell books</option>
+                          <option>I want to buy books</option>
+                        </select>
+                      </p>
                       <p>
                         <label for="first_name">First name</label>
                         <input type="text" name="first_name" placeholder="First Name..." required>
@@ -68,7 +76,30 @@
                         <input type="email" name="email" placeholder="Email Here..." required>
                       </p>
                       <p class="full">
-                        <label for="message">Your message</label>
+                        <label for="phone">Phone Number: </label>
+                        <input type="number" name="phone" placeholder="Phone Here..." required>
+                      </p>
+                      <p class="full">
+                        <label>How would you like us to contact you?</label>
+                        <br>
+                        <input type="checkbox" id="phone-opt" name="contact-opt"> 
+                        <label for="phone-opt">Phone</label>
+                        <br>
+                        <input type="checkbox" id="email-opt" name="contact-opt"> 
+                        <label for="email-opt">Email</label>
+                      </p>
+                      <p class="full">
+                        <label>Do you want to receive our weekly newsletter</label>
+                        <br>
+                        <input type="radio" id="yes" name="contact-opt" checked> 
+                        <label for="yes">Yes</label>
+                        <br>
+                        <input type="radio" id="no" name="contact-opt"> 
+                        <label for="no">No</label>
+                      </p>
+                      <p class="full">
+                        <label for="message">Note</label>
+                        <br>
                         <textarea name="message" required></textarea>
                       </p>
                       <p class="full">
@@ -88,7 +119,7 @@
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="">Terms</a></li>
             <li><a href="">Copyright</a></li>
-            <li><a href="./redirect/contact/contact.html" class="activate">Contact Us</a></li>
+            <li><a href="../contact/contact.html" class="activate">Contact Us</a></li>
         </ul>
         </nav>
     </footer>

@@ -284,6 +284,9 @@ footer{
     .box img {
         margin: 10px auto;
     }
+    .title, .brief{
+        display: none !important;
+    }
 }
 
 .empty {
