@@ -479,5 +479,10 @@ input[type='radio'] {
     .form-info ul li {
       margin-top: 2rem;
     }
-  
-  }
+}
+
+#dropdown {
+    margin-top: 20px;
+    width: 180px;
+    height: 50px;
+}
