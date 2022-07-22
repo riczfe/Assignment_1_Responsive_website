@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    
 }
 
 body{
@@ -14,6 +15,11 @@ ul{
 a{
     text-decoration: none;
 }
+
+.bold {
+    font-weight: 800;
+}
+
 .main{
     width:100%;
     height: 6vh;
@@ -208,7 +214,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0px;
+    margin: 20px -10px;
     align-content: space-between;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -217,9 +223,9 @@ footer{
 .box{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width:70%;
+    width:40%;
     text-align: center;
     box-shadow: 2px 2px 20px rgba(90,118,253,0.15);
     border-radius: 10px;
@@ -228,7 +234,7 @@ footer{
     flex-grow: 1;
 }
 .box img{
-    height:150px;
+    height:450px;
     margin:10px;
 }
 .box font{
@@ -340,7 +346,67 @@ footer{
 }
 
 .bold {
-    font-weight: 700;
-    font-size: 22px;
-    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.sub-img {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.sub-img img {
+    height: 71px;
+    width: 65px;
+}
+
+@media screen and (max-width: 960px) {
+    .sub-img {
+        display: inline;
+        width: 100%;
+    }
+}
+
+.price-section {
+    max-width: 300px;
+    margin: 80px;
+    text-align: center;
+    font-family: arial;
+    margin-bottom: 175px;
+}
+
+.price-section button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 181px;
+    font-size: 24px;
+    border-radius: 16px;
+}
+
+.price-section button:hover {
+    opacity: 0.7;
+}
+
+.book-description {
+    font-size: 26px;
+}
+
+footer {
+    height: 0;
+    width: 100%;
+}
+
+.book-description h2{
+    margin-top: 10px
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
 }
