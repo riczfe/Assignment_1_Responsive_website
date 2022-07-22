@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
-    
+}
+
+:root {
+    --primary-color: #936fe7;
+    --secondary-color: #a18eaa;
 }
 
 body{
@@ -15,11 +19,6 @@ ul{
 a{
     text-decoration: none;
 }
-
-.bold {
-    font-weight: 800;
-}
-
 .main{
     width:100%;
     height: 6vh;
@@ -214,18 +213,16 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px -10px;
-    align-content: space-between;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
+    flex-wrap: wrap;
+    margin: 20px 30px;
 }
 .box{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width:40%;
+    width:50%;
+    height: 400px;
     text-align: center;
     box-shadow: 2px 2px 20px rgba(90,118,253,0.15);
     border-radius: 10px;
@@ -234,7 +231,7 @@ footer{
     flex-grow: 1;
 }
 .box img{
-    height:450px;
+    height:150px;
     margin:10px;
 }
 .box font{
@@ -276,18 +273,6 @@ footer{
     transition: all ease 0.3s;
 }
 
-@media screen and (max-width: 960px){
-    .box{
-        display: grid;
-        width: 70%;
-    }
-    .box img {
-        margin: 10px auto;
-    }
-    .title, .brief{
-        display: none !important;
-    }
-}
 
 .empty {
     width:70px !important ;
@@ -305,111 +290,194 @@ footer{
     color: rgb(230, 218, 114) !important 
 }
 
-#footer-menu a:hover {
-    background: transparent;
-    color: transparent;
-    box-shadow:unset;
-    color:rgb(230, 218, 114);
-}
-
-@media screen and (max-width: 960px) {
-    #footer-menu a{
-        display: inline;
-        line-height: 0;
-        padding: 0;
-        font-size: 11px;
-    }
-}
-
-.services{
-    background-image:url("../images/poduct\ bg.png");
-    background-size: 1000px;
-    background-position: center;
-}
-.services-heading{
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  #heading {
+    background: var(--primary-color);
+    height: 20rem;
+  }
+  
+.heading-wrap {
+    color: #fff;
+    padding: 3rem 0;
     text-align: center;
-    flex-direction: column;
+    max-width: 20rem;
+    margin: 0 auto;
 }
-.services-heading h2{
-    line-height: 55px;
-    font-size: 2.2rem;
-    color:#22252e;
-    letter-spacing: 1px;
-    font-weight: 700;
-    margin: 0px;
+  
+.heading-wrap h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-family: 'Coda Caption', sans-serif;
+  
 }
-.services-heading p{
+
+.heading-wrap p {
+    position: relative;
     font-size: 1rem;
-    color:#777474;
-    width:50%;
 }
-
-.bold {
-    font-weight: 500;
-    font-size: 18px;
+  
+.heading-wrap p::before {
+    content: '';
+    position: absolute;
+    top: -.7rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 2.7rem;
+    height: 7px;
+    background: var(--secondary-color);
 }
-
-.sub-img {
+  
+.form-box {
+    margin: -7rem 2rem 5rem 2rem;
+    box-shadow: 0 0 5px 0 rgba(49, 61, 73, 0.7);
+    border-radius: 5px;
+}
+  
+  /* Form Info */
+.form-info {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+  
+.form-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+  
+.form-info ul li {
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+}
+  
+.form-info ul li i {
+    background: #fff;
+    color: var(--secondary-color);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
-    width: 200px;
-}
-
-.sub-img img {
-    height: 71px;
-    width: 65px;
-}
-
-@media screen and (max-width: 960px) {
-    .sub-img {
-        display: inline;
-        width: 100%;
-    }
-}
-
-.price-section {
-    max-width: 300px;
-    margin: 80px;
     text-align: center;
-    font-family: arial;
-    margin-bottom: 175px;
+    justify-content: center;
+    margin-right: .5rem;
 }
-
-.price-section button{
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 181px;
-    font-size: 24px;
-    border-radius: 16px;
+  
+/* Form input */
+.form-input {
+    padding: 0 2rem;
+    background: #fff;
 }
-
-.price-section button:hover {
-    opacity: 0.7;
+  
+.form-input h3 {
+    margin: 1.5rem 0 2rem 0;
+    font-size: 1.3rem;
+    color: #333;
 }
-
-.book-description {
-    font-size: 26px;
+  
+.form-input form {
+    display: grid;
+    grid-gap: 1rem;;
+    grid-template-columns: repeat(2, 1fr);
 }
-
-footer {
-    height: 0;
+  
+.form-input label {
+    font-weight: bold;
+    color: #222222;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+  
+.form-input input {
+    height: 1.5em;
+    text-indent: 1em;
+    border: .5px solid #149cc567;
+}
+  
+/* .form-input form input, .form-input form textarea {
     width: 100%;
 }
-
-.book-description h2{
-    margin-top: 10px
+   */
+.form-input form textarea {
+    height: 6rem;
+    padding: 1em;
+    border: .5px solid #149cc567;
+}
+  
+.form-input form .full {
+    grid-column: 0 / 3;
+  }
+  
+.form-input form button {
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+    height: 2.5rem;
+    background: var(--secondary-color);
+    border: none;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s ease
+    ;
+}
+  
+input[type='radio'] {
+    transform: scale(1.5)
 }
 
-ul.breadcrumb li {
-    display: inline;
-    font-size: 18px;
-}
+  .form-input form button:hover {
+    background: #fff;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+  }
+  
+  /* LARGE SCREEN */
+  @media (min-width: 960px) {
+    #heading {
+      height: 25rem;
+    }
+  
+    .heading-wrap h1 {
+      font-size: 2.5rem;
+    }
+  
+    .form-box {
+      margin-top: -10rem;
+    }
+  
+    .form-box-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      
+    }
+    
+    .form-input {
+      grid-row: 1;
+      grid-column: 1 / 3;
+    }
+  
+    .form-info {
+      grid-column: 3 / 4;
+    }
+  
+    .form-info ul {
+      margin-top: 4rem;
+    }
+  
+    .form-info ul li {
+      margin-top: 2rem;
+    }
+  
+  }
