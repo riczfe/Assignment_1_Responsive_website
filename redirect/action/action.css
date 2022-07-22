@@ -231,6 +231,7 @@ footer{
     background-color: #fff;
     margin: 20px;
     flex-grow: 1;
+    height: 300px
 }
 .box img{
     height:150px;
@@ -279,6 +280,7 @@ footer{
     .box{
         display: grid;
         width: 70%;
+        height: 860px;
     }
     .box img {
         margin: 10px auto;
@@ -296,8 +298,8 @@ footer{
 }
 
 .empty:hover {
-    background: none !important ;
-    box-shadow: none !important ;
+    background: transparent !important ;
+    box-shadow: 0 !important ;
     color: rgb(230, 218, 114) !important 
 }
 
@@ -349,3 +351,17 @@ footer{
     font-size: 18px;
 }
 
+.remove {
+    border: none !important;
+}
+
+.box .remove:hover {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.heading {
+    font-weight: 700;
+    font-size: 23px;
+    color: rgb(5, 97, 128)
+}
