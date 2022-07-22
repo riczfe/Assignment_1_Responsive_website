@@ -335,7 +335,12 @@ footer{
   
 @media screen and (max-width: 960px){
     .box{
-      width: 70%;
+        width: 100%;
+    }
+
+    .box img {
+        width: 110px;
+        height: 76px;
     }
     .popup{
       width: 70%;
@@ -362,4 +367,14 @@ footer{
     background: none !important ;
     box-shadow: none !important ;
     color: rgb(230, 218, 114) !important 
+}
+
+.pic a {
+    display: inline !important;
+    border: none !important
+}
+
+.pic a:hover {
+    box-shadow: none !important;
+    background: none !important
 }
